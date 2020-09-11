@@ -67,6 +67,12 @@ class MainActivity : AppCompatActivity() {
                     (field1.text == field4.text && field4.text == field7.text && field1.text != "") ||
                     (field2.text == field5.text && field5.text == field8.text && field2.text != "")
 
-        return horizontal || vertical
+        val leftTopToRightBottom =
+            (field0.text == field4.text && field4.text == field8.text && field0.text != "")
+
+        val rightTopToLeftBottom =
+            (field2.text == field4.text && field4.text == field6.text && field2.text != "")
+
+        return horizontal || vertical || leftTopToRightBottom || rightTopToLeftBottom
     }
 }
